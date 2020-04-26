@@ -1,28 +1,25 @@
 {
-  "name": "node-keepalive",
+  "name": "keep-glitch-alive",
   "version": "0.0.1",
-  "description": "Keep a Glitch project always alive.",
-  "main": "main.js",
-  "scripts": {
-    "start": "node main.js"
-  },
-  "dependencies": {
-    "node-cron-link": "^0.0.3",
-    "express": "^4.16.4",
-    "node-sanitize-options": "^0.0.4"
-  },
-  "engines": {
-    "node": "8.x"
-  },
+  "description": "Keep multiple applications hosted on the glitch always alive",
+  "author": "retromada",
   "repository": {
-    "url": "https://github.com/animatedcreativity/node-keepalive"
+    "type": "git",
+    "url": "git://github.com/retromada/keep-glitch-alive.git"
   },
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/retromada/keep-glitch-alive/blob/master/LICENSE"
+    }
+  ],
   "keywords": [
     "node",
     "project",
     "glitch",
-    "keepalive",
+    "keep",
     "alive"
-  ]
+  ],
+  "dependencies": {},
+  "main": "index.js"
 }

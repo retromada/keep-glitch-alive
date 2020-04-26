@@ -54,17 +54,10 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+*.lock
+
 # dotenv environment variables file
 .env
 
 # next.js build output
 .next
-
-#Remove extras
-.pki
-shrinkwrap.yaml
-.glitch-assets
-.nano
-ip.sh
-database.nosql
-store.json
