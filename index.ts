@@ -46,7 +46,7 @@ function KeepGlitchAlive(
   const call = () => {
     endpoint = endpoint.startsWith('/') ? endpoint.slice(1) : endpoint
 
-    return Promise.all([projects].filter(Boolean).map((project) => {
+    return Promise.all([...projects].filter(Boolean).map((project) => {
       return fetch(`https://${project}.glitch.me/${endpoint}`)
         .then(({ status, statusText }) => ({ status, statusText }))
     }))
