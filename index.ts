@@ -17,7 +17,6 @@ interface Options {
  * @param options.makeMeAwake Whether this project will be pinged (valid if it is in the glitch)
  * @param app An express application
  */
-
 function KeepGlitchAlive(
   {
     projects,
@@ -48,7 +47,7 @@ function KeepGlitchAlive(
 
     return Promise.all([...projects].filter(Boolean).map((project) => {
       return fetch(`https://${project}.glitch.me/${endpoint}`)
-        .then(({ status, statusText }) => ({ status, statusText }))
+        .then(({ status, statusText }) => ({ status, statusText, project }))
     }))
   }
 
@@ -57,7 +56,7 @@ function KeepGlitchAlive(
       try {
         const calls = await call()
 
-        calls.forEach((called) => console.log('[Called]', called.statusText, `(${called.status})`))
+        calls.forEach((called) => console.log('[Called]', `"${called.project}"`, called.statusText, `(${called.status})`))
       } catch (error) {
         console.error('[CallError]', error)
       }
